@@ -9,7 +9,15 @@
 :borkdude: {person}borkdude[@borkdude]
 
 [.normal]
-A release with known breaking changes is marked with:
+Rewrite-clj versioning scheme is: `major`.`minor`.`release`-`test-qualifier`
+
+* `major` increments when a non alpha release API has been broken - something, as a rule, we'd like to avoid.
+* `minor` increments to convey significant new features or changes.
+* `release` indicates smaller changes or bug fixes - starting with v1.1, it is the rewrite-clj release count over the life of rewrite-clj.
+* `test-qualifier` is absent for stable releases.
+Can be `alpha`, `beta`, `rc1`, etc.
+
+A release with known breaking changes is described in the changelog with:
 
 * [breaking] you probably need to change your code
 * [minor breaking] you likely don't need to change your code
@@ -24,8 +32,31 @@ A release with known breaking changes is marked with:
 //   (adjust these in publish.clj as you see fit)
 === Unreleased
 
+=== v1.3.58 - 2026-09-28 [[v1.3.58]]
+
+* fix: operations that read from a file no longer leak a file descriptor:
+{issue}483[#483] ({lread}):
+** `rewrite-clj.parser/parse-file`
+** `rewrite-clj.parser/parse-file-all`
+** `rewrite-clj.zip/of-file`
+** `rewrite-clj.zip/of-file*`
+
+https://github.com/clj-commons/rewrite-clj/compare/v1.2.57\...v1.3.58[commit log]
+
+=== v1.2.57 - 2026-08-29 [[v1.2.57]]
+
 * fix: Don't crash when 1-char buffer PBR is provided.
 {issue}466[#466] ({person}alexander-yakushev[@alexander-yakushev])
+* perf: Reduce memory pressure and increase performance by changing the way rewrite-clj internally concats strings
+{issue}478[#478] ({person}nnichols[@nnichols])
+* ci: fix error in rewrite-clj lib publish flow
+({lread})
+
+https://github.com/clj-commons/rewrite-clj/compare/v1.2.55\...v1.2.57[commit log]
+
+=== v1.2.56 - 2026-08-29 [[v1.2.56]]
+
+* No release on clojars: failed due to an error ci workflow.
 
 === v1.2.55 - 2026-06-19 [[v1.2.55]]
 

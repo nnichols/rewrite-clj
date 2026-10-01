@@ -1,6 +1,6 @@
 :notitle:
 // num-contributors is updated automatically by doc-readme-update bb task
-:num-contributors: 62
+:num-contributors: 63
 :figure-caption!:
 :imagesdir: ./doc
 :project-src-coords: clj-commons/rewrite-clj
@@ -61,6 +61,8 @@ Some projects using rewrite-clj v1
 * https://github.com/mauricioszabo/duck-repled[duck-repled] {not-canary-tested} - Transform your REPL interation into Pathom queries
 // tests for gen-fn rely on datomic-pro
 * https://github.com/ivarref/gen-fn[gen-fn] {not-canary-tested} - Generate Datomic function literals from regular Clojure namespaces
+// tests failed for me when I tried them
+* https://github.com/paintparty/jus[jus] {not-canary-tested} - TUI app for Clojure dialects
 * https://github.com/jonase/kibit[kibit] {canary-tested} - There's a function for that!
 // kit repo is not version tagged:
 * https://github.com/kit-clj/kit[kit] {not-canary-tested} - Lightweight, modular framework for scalable web development in Clojure
@@ -92,16 +94,6 @@ Have an update? Let us know!
 {canary-needed-patch} [.small]#source required minor change to work with rewrite-clj v1# +
 {not-canary-tested} [.small]#no easy-peasy way to run automated unit tests found for this project#
 
-== Versioning
-
-Rewrite-clj versioning scheme is: `major`.`minor`.`release`-`test-qualifier`
-
-* `major` increments when a non alpha release API has been broken - something, as a rule, we'd like to avoid.
-* `minor` increments to convey significant new features have been added.
-* `release` indicates small changes or bug fixes - starting with v1.1, it is the rewrite-clj release count over the life of rewrite-clj.
-* `test-qualifier` is absent for stable releases.
-Can be `alpha`, `beta`, `rc1`, etc.
-
 [[contributors]]
 == People
 
@@ -126,6 +118,7 @@ image:danielcompton.png[danielcompton,role="left",width=250,link="https://github
 image:ericdallo.png[ericdallo,role="left",width=250,link="https://github.com/ericdallo"]
 image:FiV0.png[FiV0,role="left",width=250,link="https://github.com/FiV0"]
 image:jespera.png[jespera,role="left",width=250,link="https://github.com/jespera"]
+image:nnichols.png[nnichols,role="left",width=250,link="https://github.com/nnichols"]
 image:NoahTheDuke.png[NoahTheDuke,role="left",width=250,link="https://github.com/NoahTheDuke"]
 image:onbreath.png[onbreath,role="left",width=250,link="https://github.com/onbreath"]
 image:PEZ.png[PEZ,role="left",width=250,link="https://github.com/PEZ"]
